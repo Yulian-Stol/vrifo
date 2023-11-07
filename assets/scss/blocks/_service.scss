@@ -1,0 +1,82 @@
+.reviews-services {
+  padding: 70px 0;
+
+  @media screen and (min-width: $breakpoint-md) {
+    padding-top: 150px;
+    padding-bottom: 200px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (min-width: $breakpoint-xs) {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      row-gap: 20px;
+      column-gap: 10px;
+    }
+
+    @media screen and (min-width: $breakpoint-md) {
+      row-gap: 18px;
+      column-gap: 20px;
+    }
+
+    .flex-row-break {
+      @media screen and (min-width: $breakpoint-xl) {
+        display: block;
+      }
+    }
+
+    .service {
+      padding: 11px 18px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 85px;
+      border: 1px solid var(--color-base-200);
+      background: var(--color-base-100);
+      transition: all 0.3s;
+
+      @media screen and (min-width: $breakpoint-md) {
+        padding: 18px 20px;
+        font-size: 22px;
+      }
+
+      @media screen and (min-width: $breakpoint-xxl) {
+        padding: 18px 35px;
+      }
+
+      &:hover {
+        background: var(--color-secondary-100);
+        box-shadow: 0px 4px 35px -5px var(--color-secondary-100);
+        border-color: var(--color-secondary-100);
+        color: var(--color-white);
+      }
+
+      img {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        padding: 4px;
+        background: var(--color-white);
+
+        @media screen and (min-width: $breakpoint-md) {
+          width: 43px;
+          height: 43px;
+        }
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+}

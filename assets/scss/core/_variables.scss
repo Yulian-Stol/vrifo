@@ -1,0 +1,30 @@
+$breakpoint-xs: 375px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+$color-map: (
+  "white": #fff,
+  "primary-100": #00112c,
+  "secondary-100": #3e64f8,
+  "secondary-100-15": #3e64f826,
+  "base-100": #f8f8f8,
+  "base-200": #eef0f5,
+  "base-300": #d2d5dc,
+  "base-400": #b2b5be,
+  "base-500": #8f9394,
+  "base-600": #333333,
+);
+
+
+$Inter: 'Inter';
+$Quicksand: 'Quicksand';
+
+
+:root {
+  @each $name, $color in $color-map {
+    --color-#{$name}: #{$color};
+  }
+}

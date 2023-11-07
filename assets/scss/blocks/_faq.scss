@@ -1,0 +1,97 @@
+.faq {
+  padding: 70px 0;
+
+  @media screen and (min-width: $breakpoint-md) {
+    padding: 150px 0;
+  }
+
+  &__list {
+    padding: 0 10px;
+  }
+
+  &__accordion {
+    padding: 25px 30px;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 18px;
+    background: var(--color-base-100);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-header {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      color: var(--color-primary-100);
+
+      h5 {
+        font-size: 16px;
+
+        @media screen and (min-width: $breakpoint-md) {
+          font-size: 22px;
+        }
+      }
+    }
+
+    &-content {
+      overflow: hidden;
+      height: 0;
+      transition: all 0.3s;
+    }
+
+    &-btn {
+      position: relative;
+      display: block;
+      width: 34px;
+      height: 34px;
+      transition: all 0.3s;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background-image: url("../icons/subtract.svg");
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--color-primary-100);
+        transition: all 0.3s;
+      }
+
+      &::before {
+        width: 12px;
+        height: 2px;
+        border-radius: 25px;
+      }
+
+      &::after {
+        height: 12px;
+        width: 2px;
+        border-radius: 25px;
+      }
+    }
+
+    &.active {
+      transition: all 0.3s;
+
+      .faq__accordion-header {
+        .faq__accordion-btn {
+          &::after {
+            background-color: transparent;
+          }
+        }
+      }
+
+      .faq__accordion-content {
+        opacity: 1;
+        margin-top: 20px;
+      }
+    }
+  }
+}

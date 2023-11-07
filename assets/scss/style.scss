@@ -1,0 +1,29 @@
+// Core
+@import "core/variables";
+@import "core/reset";
+@import "core/helpers";
+@import "core/globals";
+@import "core/fonts";
+@import "core/typography";
+
+// Components
+@import "components/buttons";
+
+// Layout
+@import "layout/grid";
+@import "layout/header";
+@import "layout/footer";
+
+// Blocks
+@import "blocks/sections";
+@import "blocks/hero";
+@import "blocks/service";
+@import "blocks/text-with-image";
+@import "blocks/testimonials";
+@import "blocks/faq";
+@import "blocks/offer";
+@import "blocks/steps-of-work";
+@import "blocks/statistics";
+
+// Pages
+@import "pages/front-page";

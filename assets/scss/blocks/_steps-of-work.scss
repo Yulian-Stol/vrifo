@@ -1,0 +1,88 @@
+.steps-of-work {
+  padding-bottom: 90px;
+
+  @media screen and (min-width: $breakpoint-lg) {
+    padding-bottom: 200px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (min-width: $breakpoint-lg) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    flex: 1;
+    text-align: center;
+
+    &-img {
+      margin: 0 auto 25px;
+      max-width: 75px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-number-step {
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: var(--color-base-500);
+    }
+
+    &-title {
+      max-width: 175px;
+      margin: 0 auto;
+
+      @media screen and (min-width: $breakpoint-md) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__bullets {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    gap: 2px;
+
+    @media screen and (min-width: $breakpoint-lg) {
+      flex-direction: row;
+      margin-top: 45px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      display: block;
+      border-radius: 50%;
+      background: var(--color-base-200);
+    }
+
+    span {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--color-base-200);
+
+      &:nth-child(n + 6) {
+        display: none;
+      }
+
+      @media screen and (min-width: $breakpoint-lg) {
+        &:nth-child(n + 6) {
+          display: block;
+        }
+      }
+    }
+  }
+}

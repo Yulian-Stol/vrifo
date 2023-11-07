@@ -1,0 +1,48 @@
+.btn, .wp-element-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 25px;
+  gap: 10px;
+  font-family: $Inter;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.9px;
+  color: var(--color-white);
+  transition: 0.3s;
+  background: var(--color-primary-100);
+  width: fit-content;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &--secondary {
+    background: var(--color-secondary-100);
+  }
+
+  &--white {
+    background: var(--color-white);
+    color: var(--color-primary-100);
+  }
+
+  &--big {
+    padding: 14px 50px;
+    font-size: 18px;
+
+    @media screen and (min-width: $breakpoint-sm) {
+      padding: 18px 50px;
+    }
+  }
+
+  &--mob-full-width {
+    width: 100%;
+
+    @media screen and (min-width: $breakpoint-sm) {
+      width: fit-content;
+    }
+  }
+
+  &--small {
+    padding: 8px 25px;
+  }
+}

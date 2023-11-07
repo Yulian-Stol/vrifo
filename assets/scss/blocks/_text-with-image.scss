@@ -1,0 +1,98 @@
+.text-with-image {
+  padding: 70px 0;
+
+  @media screen and (min-width: $breakpoint-xl) {
+    padding: 150px 0;
+  }
+
+  .section-header {
+    &__title {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__img {
+    img {
+      margin: 0 auto;
+
+      @media screen and (min-width: $breakpoint-xl) {
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__content {
+    margin-bottom: 40px;
+
+    @media screen and (min-width: $breakpoint-xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .item {
+      display: flex;
+      align-items: start;
+      gap: 10px;
+
+      img {
+        margin-top: 5px;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  &__benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      img {
+        margin-top: 0;
+        width: 60px;
+        height: 60px;
+      }
+
+      &__content {
+        @media screen and (min-width: $breakpoint-xl) {
+          max-width: 330px;
+        }
+
+        &-title {
+          font-size: 24px;
+          font-weight: 600;
+          margin-bottom: 5px;
+
+          @media screen and (min-width: $breakpoint-xl) {
+            font-style: 22px;
+          }
+        }
+
+        &-description {
+          color: var(--color-base-500);
+        }
+      }
+    }
+  }
+
+  .row-reverse {
+    .text-with-image__img {
+      img {
+        @media screen and (min-width: $breakpoint-xl) {
+          margin-right: auto;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

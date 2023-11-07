@@ -1,0 +1,10 @@
+body {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-primary-100);
+  font-family: $Quicksand;
+}
+
+main {
+  flex: 1;
+}
